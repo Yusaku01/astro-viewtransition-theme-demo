@@ -1,38 +1,28 @@
-# astro-viewtransition-loading
+# astro-viewtransition-theme-demo
 
-AstroのView Transitionsと連携し、ページ遷移中にローディングUIを出す挙動を確認するためのデモプロジェクト。
+`astro-viewtransition-theme` を試すためのデモプロジェクト。AstroのView Transitionsと連携し、テーマ切り替え時の挙動を確認する。
 
 ## このプロジェクトの目的
 
-- View Transitionの開始〜完了までの表示タイミングを検証する
-- ローディングUI（プログレスバー/スピナー）の切り替え例を示す
-- サンプル記事の遷移で動作確認しやすい状態を用意する
+- `astro-viewtransition-theme` の導入手順と使い方を最小構成で確認する
+- View Transitionを使ったテーマ切り替えの動作を検証する
+- 変更の影響を小さく保った検証用ベースとして使えるようにする
 
 ## 機能
 
-- **LoadingIndicator** - 画面上部に表示されるプログレスバー
-- **LoadingSpinner** - 画面中央に表示されるスピナー
-
-両コンポーネントとも `threshold` プロパティで表示遅延を設定可能（デフォルト200ms）。
+- `ThemeInit` - 初期テーマの適用と同期
+- `ThemeToggle` - テーマ切り替えボタン
+- `ClientRouter` - View Transitionsを有効化するためのルーター
 
 ## プロジェクト構造
 
 ```
 src/
-├── api/           # 記事データAPI
-├── components/    # ローディングUI・記事コンポーネント
-├── layouts/       # レイアウト
-└── pages/         # ページ
-data/              # 記事データ（JSONC）
-docs/              # コンポーネントドキュメント
+├── layouts/       # ThemeInit/ThemeToggle を組み込んだレイアウト
+├── pages/         # デモページ
+└── assets/        # 画像やスタイルなどのアセット
+public/            # 公開アセット（favicon など）
 ```
-
-## ローディングUIの切り替え
-
-`src/layouts/Layout.astro` で使用するコンポーネントを変更：
-
-- LoadingIndicator（プログレスバー）← 現在有効
-- LoadingSpinner（スピナー）← コメントアウト中
 
 ## コマンド
 
