@@ -1,6 +1,12 @@
 # astro-viewtransition-loading
 
-Astro View Transitionと連携したローディングUIのデモ。
+AstroのView Transitionsと連携し、ページ遷移中にローディングUIを出す挙動を確認するためのデモプロジェクト。
+
+## このプロジェクトの目的
+
+- View Transitionの開始〜完了までの表示タイミングを検証する
+- ローディングUI（プログレスバー/スピナー）の切り替え例を示す
+- サンプル記事の遷移で動作確認しやすい状態を用意する
 
 ## 機能
 
